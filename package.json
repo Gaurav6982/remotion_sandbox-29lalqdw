@@ -1,20 +1,30 @@
 {
-  "name": "sandbox",
-  "version": "0.0.0",
+  "name": "design-test",
+  "version": "1.0.0",
+  "description": "My Remotion video",
+  "repository": {},
+  "license": "UNLICENSED",
   "private": true,
   "dependencies": {
-    "react": "15.6.1",
-    "react-dom": "15.6.1",
-    "semantic-ui-css": "2.2.11",
-    "semantic-ui-react": "0.71.3"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "@remotion/cli": "4.0.314",
+    "@remotion/zod-types": "4.0.314",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "remotion": "4.0.314",
+    "zod": "3.22.3"
   },
   "devDependencies": {
-    "react-scripts": "latest"
+    "@remotion/eslint-config-flat": "4.0.314",
+    "@types/react": "19.0.0",
+    "@types/web": "0.0.166",
+    "eslint": "9.19.0",
+    "prettier": "3.3.3",
+    "typescript": "5.8.2"
+  },
+  "scripts": {
+    "dev": "remotion studio",
+    "build": "remotion bundle",
+    "upgrade": "remotion upgrade",
+    "lint": "eslint src && tsc"
   }
 }
