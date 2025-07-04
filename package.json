@@ -7,6 +7,7 @@
   "private": true,
   "dependencies": {
     "@remotion/cli": "4.0.314",
+    "@remotion/lottie": "4.0.320",
     "@remotion/player": "^4.0.314",
     "@remotion/zod-types": "4.0.314",
     "axios": "^1.9.0",

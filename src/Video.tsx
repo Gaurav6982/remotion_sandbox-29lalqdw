@@ -1,18 +1,29 @@
 import {Composition} from 'remotion';
-import {SplitImageTitleScene} from './SplitImageTitleScene';
+import {CombinedScene} from './CombineScenes';
 
 export const RemotionVideo = () => {
-    return <Composition
-        id="SplitImageTitle"
-        component={SplitImageTitleScene}
-        durationInFrames={150} // can be dynamic
-        fps={30}
-        width={1920}
-        height={1080}
-        defaultProps={{
-            imageUrl: 'https://media.istockphoto.com/id/1973365581/vector/sample-ink-rubber-stamp.jpg?s=2048x2048&w=is&k=20&c=-nRicEMFco-wjZrqf2MTWa5dlmVM312tNFy7Mw3Rj4I=',
-            title: 'My Video Title',
-            audioDurationInSeconds: 5,
-        }}
-    />
+    return (
+        <>
+            <Composition
+                id="CombinedScene"
+                component={CombinedScene}
+                durationInFrames={300} // scene1 + scene2 = 2 * (audioDurationInSeconds * fps)
+                fps={30}
+                width={1920}
+                height={1080}
+                defaultProps={{
+                    imageUrl: 'https://via.placeholder.com/600x800',
+                    title: 'Welcome to Our Service',
+                    heading: 'Why Choose Us',
+                    bulletPoints: [
+                        'Fast rendering engine',
+                        'Modular and composable scenes',
+                        'Supports audio sync',
+                        'Open-source and free',
+                    ],
+                    audioDurationInSeconds: 5,
+                }}
+            />
+        </>
+    );
 };
